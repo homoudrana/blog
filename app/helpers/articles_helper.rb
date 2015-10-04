@@ -1,0 +1,11 @@
+module ArticlesHelper
+
+  def full_title(page_title= '')
+    base_title="Rana"
+    if page_title.empty?
+      base_title
+    else
+      page_title + "| " +base_title
+    end
+  end
+end

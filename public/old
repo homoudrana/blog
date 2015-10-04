@@ -1,0 +1,11 @@
+Hello rana
+<%= form_for [:admin, @category] do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+    <%= f.collection_select(:parentcat, Category.all, :id, :name , {:include_blank => 'Select', :default => 0 }) %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
